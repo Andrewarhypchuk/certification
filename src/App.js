@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useEffect } from "react";
+import { Route, Routes } from "react-router";
+import QuizContainer from "./Components/QuizContainer";
+import { useDispatch } from "react-redux";
+import { setCategories } from "./Redux/quiz-slice";
+import ResultsContainer from "./Components/ResultsContainer";
 
 function App() {
+   const dispatch = useDispatch();
+   useEffect(() => {
+      dispatch(setCategories())
+   })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<QuizContainer />} />
+        <Route path="/result" element={<ResultsContainer /> } />
+        <Route path="*" element={<div>no such page</div>} />
+      </Routes>
     </div>
   );
 }
