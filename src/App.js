@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { useEffect } from "react";
 import { Route, Routes } from "react-router";
 import QuizContainer from "./Components/QuizContainer";
