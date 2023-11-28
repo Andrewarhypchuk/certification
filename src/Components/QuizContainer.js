@@ -1,3 +1,4 @@
+import React from "react";
 import CategoryListContainer from "./CategoryListContainer";
 import CreateQuiz from "./CreateQuizButton";
 import DifficultyListContainer from "./DifficultyListContainer";

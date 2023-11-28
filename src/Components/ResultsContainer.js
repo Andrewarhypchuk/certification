@@ -1,3 +1,4 @@
+import React from "react";
 import QuizQuestionListContainer from "./QuizQuestionListContainer";
 
 const ResultsContainer = () => {

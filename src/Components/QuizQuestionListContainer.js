@@ -1,3 +1,4 @@
+import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { selectQuiz, selectStatus } from "../Redux/quiz-slice";

@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectQuestionAnswer, setAnswer } from "../Redux/quiz-slice";
 import { useAnswersList } from "../CustomHooks/useAnswersList";
